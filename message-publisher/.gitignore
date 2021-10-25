@@ -1,0 +1,14 @@
+.gradle
+build
+classes
+temp
+out
+.idea
+kotlinc.xml
+*.iml
+lib
+.DS_Store
+.project
+.classpath
+.settings
+bin
