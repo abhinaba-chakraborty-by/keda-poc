@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    azure:
+      servicebus:
+        connection-string: 
+    stream:
+      bindings:
+        consume-in-0:
+          destination: item-ingestion-queue
+      servicebus:
+        queue:
+          bindings:
+            consume-in-0:
+              consumer:
+                checkpoint-mode: MANUAL
+      function:
+        definition: consume;
+      poller:
+        fixed-delay: 1000
+        initial-delay: 0
+
+logging:
+  level:
+    com.azure.messaging.servicebus.implementation.ServiceBusReceiveLinkProcessor: OFF

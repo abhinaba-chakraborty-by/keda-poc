@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.azure.spring:azure-spring-cloud-stream-binder-servicebus-queue:2.9.0'
+}
