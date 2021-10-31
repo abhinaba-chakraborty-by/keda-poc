@@ -27,7 +27,7 @@ public class ConsumerApplication {
       Checkpointer checkpointer = (Checkpointer) message.getHeaders().get(CHECKPOINTER);
       LOGGER.info("Message received: '{}'. Processing it...", message.getPayload());
       try {
-        Thread.sleep(2000);
+        Thread.sleep(500);
       } catch (InterruptedException e) {
         e.printStackTrace();
       }

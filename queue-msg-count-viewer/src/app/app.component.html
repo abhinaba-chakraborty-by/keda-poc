@@ -1,3 +1,19 @@
 <div>
   <p> The number of active messages in the queue: {{ msgCount }}</p>
 </div>
+
+
+<ngx-charts-bar-vertical
+    [view]="view"
+    [scheme]="colorScheme"
+    [gradient]="gradient"
+    [results]="data"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [showGridLines]="showGridLines"
+    [tooltipDisabled]="tooltipDisabled">
+</ngx-charts-bar-vertical>

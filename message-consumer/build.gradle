@@ -1,6 +1,10 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.2.7.RELEASE'
 }
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 group 'org.example'
 version '1.0-SNAPSHOT'
@@ -11,4 +15,8 @@ repositories {
 
 dependencies {
     implementation 'com.azure.spring:azure-spring-cloud-stream-binder-servicebus-queue:2.9.0'
+}
+
+bootJar{
+    mainClassName = 'com.abhi.ConsumerApplication'
 }
